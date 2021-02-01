@@ -1,5 +1,12 @@
+Vue.component('cat-list', {
+    template:
+    `<ul>
+        <li>cat</li>
+    </ul>`
+})
 var app = new Vue({
-	el:'#root',
+    el:'#root',
+    component:['cat-list'],
     data:{
         message:'123',
         people:[
@@ -14,13 +21,13 @@ var app = new Vue({
     	this.people.push({name:this.newPerson})
         this.newPerson = ''
     }
-  },
+    },
     //filters只會改變呈現，不會改變真正的值
     filters:{
         capitalize:function(value){
             return value.toUpperCase()
     }
-  },
+    },
     computed:{
         personify:function(){
             if(this.newPerson.length > 1)
@@ -30,3 +37,10 @@ var app = new Vue({
         }
     }
 })
+
+// var app = new Vue({
+//     el:'#root',
+//     data:{
+//         newPerson:'123'
+//     }
+// })
