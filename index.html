@@ -14,10 +14,12 @@
                 <li v-for='person in people'>{{person.name | capitalize}}</li>
               </ul>
               <!-- vue component is reusable -->
-              <cat-list></cat-list>
-              <cat-list></cat-list>
+              <person-list v-bind:people='people'></person-list>
+              <person-list v-bind:people='people'></person-list>
               <plan name='plan A'></plan>
               <plan name='plan B'></plan>
+          </div>
+          <div id='root2'>
           </div>
         <script type='text/x-template' id='plan-template'>
             <div>

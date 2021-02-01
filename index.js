@@ -1,7 +1,8 @@
-Vue.component('cat-list', {
+Vue.component('person-list', {
+    props:['people'],
     template:
     `<ul>
-        <li>cat</li>
+        <li v-for='person in people'>{{ person.name }}</li>
     </ul>`
 })
 Vue.component('plan', {
@@ -11,7 +12,7 @@ Vue.component('plan', {
 })
 var app = new Vue({
     el:'#root',
-    // component:['cat-list'],
+    // component:['person-list'],
     data:{
         message:'123',
         people:[
@@ -42,10 +43,3 @@ var app = new Vue({
         }
     }
 })
-
-// var app = new Vue({
-//     el:'#root',
-//     data:{
-//         newPerson:'123'
-//     }
-// })
