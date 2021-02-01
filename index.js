@@ -4,9 +4,14 @@ Vue.component('cat-list', {
         <li>cat</li>
     </ul>`
 })
+Vue.component('plan', {
+    template:'#plan-template',
+    // props are custom attributes
+    props: ['name']
+})
 var app = new Vue({
     el:'#root',
-    component:['cat-list'],
+    // component:['cat-list'],
     data:{
         message:'123',
         people:[

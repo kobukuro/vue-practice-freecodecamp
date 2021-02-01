@@ -13,9 +13,17 @@
               <ul>
                 <li v-for='person in people'>{{person.name | capitalize}}</li>
               </ul>
-              <cat-list/>
+              <!-- vue component is reusable -->
+              <cat-list></cat-list>
+              <cat-list></cat-list>
+              <plan name='plan A'></plan>
+              <plan name='plan B'></plan>
           </div>
-          
+        <script type='text/x-template' id='plan-template'>
+            <div>
+                <span>{{name}}</span>
+            </div>
+        </script>
         <!--import javascript written by myself-->
         <!--這個一定要放最下面-->
         <script src="index.js"></script>
