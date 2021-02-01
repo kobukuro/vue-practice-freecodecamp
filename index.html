@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <!--import vue.js of development version-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id='root'>
+            <!--v-on:keyup.enter 針對enter鍵放開時的反應；「v-on:」縮寫變成「@」-->
+            <input v-model='newPerson' @keyup.enter='addPerson'>
+            <br>
+              <ul>
+                <li v-for='person in people'>{{person.name | capitalize}}</li>
+              </ul>
+          </div>
+        <!--import javascript written by myself-->
+        <!--這個一定要放最下面-->
+        <script src="index.js"></script>
+    </body>
+</html>
