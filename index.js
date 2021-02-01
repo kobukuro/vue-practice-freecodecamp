@@ -41,5 +41,21 @@ var app = new Vue({
                 return this.newPerson + 'y'
             }
         }
+    },
+    created: function(){
+        console.log('Created')
+    },
+    mounted: function(){
+        console.log('Mounted')
+    },
+    updated: function(){
+        console.log('Updated')
+    },
+    destroyed: function(){
+        console.log('Destroyed')
     }
 })
+// 下面為了觸發destroyed而做的範例
+// setTimeout(function(){
+//     app.$destroy();
+// },5000);

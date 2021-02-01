@@ -14,6 +14,7 @@
                 <li v-for='person in people'>{{person.name | capitalize}}</li>
               </ul>
               <!-- vue component is reusable -->
+              <!-- 這裡要加v-bind 不然'people'會被視為字串 -->
               <person-list v-bind:people='people'></person-list>
               <person-list v-bind:people='people'></person-list>
               <plan name='plan A'></plan>
