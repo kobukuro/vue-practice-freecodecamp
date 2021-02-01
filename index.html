@@ -5,6 +5,8 @@
     </head>
     <body>
         <div id='root'>
+            {{ personify }}
+            <br>
             <!--v-on:keyup.enter 針對enter鍵放開時的反應；「v-on:」縮寫變成「@」-->
             <input v-model='newPerson' @keyup.enter='addPerson'>
             <br>

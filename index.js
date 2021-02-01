@@ -12,7 +12,7 @@ var app = new Vue({
 	methods:{
   	addPerson:function(){
     	this.people.push({name:this.newPerson})
-      this.newPerson = ''
+        this.newPerson = ''
     }
   },
     //filters只會改變呈現，不會改變真正的值
@@ -20,5 +20,13 @@ var app = new Vue({
         capitalize:function(value){
             return value.toUpperCase()
     }
-  }
+  },
+    computed:{
+        personify:function(){
+            if(this.newPerson.length > 1)
+            {
+                return this.newPerson + 'y'
+            }
+        }
+    }
 })
